@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function App() {
 
-  const [ numero, setNumero ] = useState('')
-  const [ segundoNumero, setSegundoNumero ] = useState('')
-  const [ resultado, setResultado ] = useState('')
+  const [ numero, setNumero ] = useState()
+  const [ segundoNumero, setSegundoNumero ] = useState()
+  const [ resultado, setResultado ] = useState()
 
   const somar = () => {
     const numeroFormatado = parseInt(numero)
@@ -12,10 +12,6 @@ export default function App() {
 
     setResultado( numeroFormatado + numeroFormatado2 )
   }
-
-  useEffect( () => {
-    console.log('variável número ', numero)
-  })
 
   return(
     <div>
