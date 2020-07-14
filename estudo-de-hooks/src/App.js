@@ -7,28 +7,28 @@ export default function App() {
   const [ resultado, setResultado ] = useState('')
 
   const somar = () => {
-    const numeroFormatado = parseInt(numero)
-    const numeroFormatado2 = parseInt(segundoNumero)
+    const numeroConvertido = parseInt(numero)
+    const segNumeroConvertido = parseInt(segundoNumero)
 
-    setResultado( numeroFormatado + numeroFormatado2 )
+    setResultado( numeroConvertido + segNumeroConvertido )
   }
 
-  useEffect( () => {
-    console.log('variável número ', numero)
-  })
+  useEffect(() => {
+    console.log('Variável número ', numero )
+  });
 
   return(
     <div>
-      Primeiro número: <br />
-      <input type="text" value={numero} onChange={e => setNumero(e.target.value)} /> <br />
-      Segundo número: <br />
+      Primeiro número: <br /><br />
+      <input type="text" valur={numero} onChange={ e => setNumero(e.target.value) }/> <br /><br />
 
-      <input type="text" value={segundoNumero} onChange={e => setSegundoNumero(e.target.value)} /> <br />
+      Segundo número: <br /><br />
+      <input type="text" valur={numero} onChange={ e => setSegundoNumero(e.target.value) } /> <br /><br />
 
-      Resultado: <br />
-      <input type="text" value={resultado} /> <br />
+      <button onClick={somar} > Somar </button> <br /><br />
 
-      <button onClick={somar} > Somar </button>
+      Resultado
+      <input type="text" value={resultado} />
     </div>
   );
 }
