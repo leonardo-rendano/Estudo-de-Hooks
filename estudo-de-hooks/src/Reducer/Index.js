@@ -20,6 +20,16 @@ export default function ReducerHook() {
     })
   }
 
+  const subtrair = () => {
+    const numeroInt = parseInt(numero)
+    const segNumeroint = parseInt(segundoNumero)
+    
+    dispatch({
+      type: 'SUBTRAÇÃO',
+      payload: numeroInt - segNumeroint
+    })
+  }
+
 
   return(
     <div>
@@ -31,7 +41,8 @@ export default function ReducerHook() {
       <input type="text" value={segundoNumero}
              onChange={ e => setSegundoNumero(e.target.value) } /> <br /><br />
 
-      <button onClick={somar} > Somar </button> <br /><br />
+      <button onClick={somar} > Somar </button> 
+      <button onClick={subtrair} > Subtrair </button> <br /><br />
 
       Resultado
       <input type="text" value={store.resultado} readOnly />

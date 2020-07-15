@@ -6,6 +6,7 @@ const STATE_INICIAL = {
 
 const somaReducer = ( state = STATE_INICIAL, action ) => {
   switch( action.type ) { ////TODA ACTION DEVE VIR ACOMPANHADA DA PROPRIEDADE "TYPE"!!
+    case 'SUBTRAÇÃO':
     case 'SOMA':
       return { ...state, resultado: action.payload } //DADO QUE ESTÁ VINDO JUNTO COM A ACTION
     default:
